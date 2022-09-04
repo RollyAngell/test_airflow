@@ -47,6 +47,17 @@ division_task = PythonOperator(
     dag=dag)
 
 # Configure Task Dependencies
+
+#
+# TODO: Configure the task dependencies such that the graph looks like the following:
+#
+#                    ->  addition_task
+#                   /                 \
+#   hello_world_task                   -> division_task
+#                   \                 /
+#                    ->subtraction_task
+
+
 hello_world_task >> addition_task
 hello_world_task >> subtraction_task
 

@@ -17,5 +17,4 @@ greet_task = PythonOperator(
     python_callable=hello_world,
     dag=dag
 )
-
         
